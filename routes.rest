@@ -2,21 +2,21 @@
 ### GET ALL CONTACTS
 GET http://localhost:8080/contacts
 ### GET CONTACT BY ID
-GET http://localhost:8080/contacts/633998317e01e692acc8db29
+GET http://localhost:8080/contacts/634ac4c1ceddc78dc81b030e
 ### CREATE CONTACT 
 POST http://localhost:8080/contacts/ HTTP/1.1 
 content-type: application/json
 
 {
-"firstName":"TestFirstName", "lastName":"TestLastName", "email":"Create@test.com", "favoriteColor":"Test", "birthday":"06/19/2000"
+"firstName":"Maddison", "lastName":"Snyder", "email":"madd@test.com", "birthday":"12/10/2010", "phone":"381-966-7951", "address":"3533 Fairway Cir", "city":"Spanish Fork", "state": "UT", "zip": 84660
 }
 
 ### UPDATE CONTACT 
-PUT http://localhost:8080/contacts/633998317e01e692acc8db29 HTTP/1.1
+PUT http://localhost:8080/contacts/6345d13226e91456b2cffc00 HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"TestFirstUpdate", "lastName":"TestLastUpdate", "email":"test@gmail.com", "favoriteColor":"Green", "birthday":"12/12/20"
+"firstName":"Joshua", "lastName":"Snyder", "email":"snyderjosh@test.com", "birthday":"01/23/1983", "phone":"381-960-7941", "address":"3533 Fairway Cir", "city":"Spanish Fork", "state": "UT", "zip": 84660
 }
 
 ### DELETE contact
