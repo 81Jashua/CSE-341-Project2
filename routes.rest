@@ -31,7 +31,7 @@ DELETE http://localhost:8080/contacts/633998317e01e692acc8db29 HTTP/1.1
 ### GET ALL PETS
 GET http://localhost:8080/pets
 ### GET PET BY ID
-GET http://localhost:8080/pets/634ac607e48de5bc59de47b0
+GET http://localhost:8080/pets/634ad40bc6894380de46df8d
 ### CREATE PET 
 POST http://localhost:8080/pets/ HTTP/1.1 
 content-type: application/json
@@ -41,7 +41,7 @@ content-type: application/json
 }
 
 ### UPDATE PET 
-PUT http://localhost:8080/pets/6345d13226e91456b2cffc00 HTTP/1.1
+PUT http://localhost:8080/pets/634ad40bc6894380de46df8d HTTP/1.1
 content-type: application/json
 
 {
@@ -49,9 +49,12 @@ content-type: application/json
 }
 
 ### DELETE PET
-DELETE http://localhost:8080/pets/633998317e01e692acc8db29 HTTP/1.1
+DELETE http://localhost:8080/pets/634ad40bc6894380de46df8d HTTP/1.1
 
 // PRODUCTION Deploy
+
+############################################ Contacts ############################################
+############################################          ############################################
 ### GET ALL CONTACTS
 GET https://w03.onrender.com/contacts
 ### GET CONTACT BY ID
@@ -72,3 +75,29 @@ content-type: application/json
 }
 ### DELETE contact
 DELETE https://w03.onrender.com/contacts/633876ffa52c4c6a870799e8 HTTP/1.1
+
+############################################ Pets ############################################
+############################################      ############################################
+
+### GET ALL PETS
+GET https://w03.onrender.com/pets
+### GET PET BY ID
+GET https://w03.onrender.com/pets/632f87066354770fc88f0288
+### CREATE PET 
+POST https://w03.onrender.com/pets HTTP/1.1 
+content-type: application/json
+
+{
+"ownerId":"Not implented Yet", "name":"TestDog", "type":"Cat", "sex":"female", "color":"Calico", "birthday":"12/10/2020", "license":"1", "habitat":"Inside", "cost":72.77, "trained": "0"
+}
+
+### UPDATE PET 
+PUT https://w03.onrender.com/pets/633876ffa52c4c6a870799e8 HTTP/1.1
+content-type: application/json
+
+{
+"ownerId":"FOO", "name":"TestDog", "type":"Cat", "sex":"female", "color":"Calico", "birthday":"12/10/2020", "license":"1", "habitat":"Inside", "cost":72.77, "trained": "0"
+}
+
+### DELETE PET
+DELETE https://w03.onrender.com/pets/633876ffa52c4c6a870799e8 HTTP/1.1
