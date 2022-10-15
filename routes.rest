@@ -1,4 +1,7 @@
 // LOCALHOST
+############################################ Contacts ############################################
+############################################          ############################################
+
 ### GET ALL CONTACTS
 GET http://localhost:8080/contacts
 ### GET CONTACT BY ID
@@ -22,6 +25,31 @@ content-type: application/json
 ### DELETE contact
 DELETE http://localhost:8080/contacts/633998317e01e692acc8db29 HTTP/1.1
 
+############################################ Pets ############################################
+############################################      ############################################
+
+### GET ALL PETS
+GET http://localhost:8080/pets
+### GET PET BY ID
+GET http://localhost:8080/pets/634ac607e48de5bc59de47b0
+### CREATE PET 
+POST http://localhost:8080/pets/ HTTP/1.1 
+content-type: application/json
+
+{
+"ownerId":"Not implented Yet", "name":"TestDog", "type":"Cat", "sex":"female", "color":"Calico", "birthday":"12/10/2020", "license":"1", "habitat":"Inside", "cost":72.77, "trained": "0"
+}
+
+### UPDATE PET 
+PUT http://localhost:8080/pets/6345d13226e91456b2cffc00 HTTP/1.1
+content-type: application/json
+
+{
+"ownerId":"FOO", "name":"TestDog", "type":"Cat", "sex":"female", "color":"Calico", "birthday":"12/10/2020", "license":"1", "habitat":"Inside", "cost":72.77, "trained": "0"
+}
+
+### DELETE PET
+DELETE http://localhost:8080/pets/633998317e01e692acc8db29 HTTP/1.1
 
 // PRODUCTION Deploy
 ### GET ALL CONTACTS
