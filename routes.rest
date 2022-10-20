@@ -11,7 +11,7 @@ POST http://localhost:8080/contacts/ HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Maddison", "lastName":"Snyder", "email":"madd@test.com", "birthday":"12/10/2010", "phone":"381-966-7951", "address":"3533 Fairway Cir", "city":"Spanish Fork", "state": "UT", "zip": 84660
+"firstName":"TestValidation", "lastName":"Snyder", "email":"madd@test.com", "birthday":"12/10/2010", "phone":"381-966-7951", "address":"3533 Fairway Cir", "city":"Spanish Fork", "state": "UT", "zip": 84660
 }
 
 ### UPDATE CONTACT 
