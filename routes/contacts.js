@@ -8,9 +8,9 @@ router.get('/', contactsController.getAll);
 
 router.get('/:id', contactsController.getSingle);
 
-router.post('/', validation.saveContact, contactsController.createContact);
+router.post('/', validation.createUpdateContact, contactsController.createContact);
 
-router.put('/:id', validation.saveContact, contactsController.updateContact);
+router.put('/:id', validation.createUpdateContact, contactsController.updateContact);
 
 router.delete('/:id', contactsController.deleteContact);
 

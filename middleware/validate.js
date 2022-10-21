@@ -1,6 +1,6 @@
 const validator = require('../helpers/validate');
 
-const saveContact = (req, res, next) => {
+const createUpdateContact = (req, res, next) => {
   const validationRule = {
     firstName: 'required|string',
     lastName: 'required|string',
@@ -16,7 +16,33 @@ const saveContact = (req, res, next) => {
     if (!status) {
       res.status(412).send({
         success: false,
-        message: 'Validation failed',
+        message: 'Contact Validation failed',
+        data: err
+      });
+    } else {
+      next();
+    }
+  });
+};
+
+const createUpdatePet = (req, res, next) => {
+  const validationRule = {
+    ownerId: 'required|string',
+    name: 'required|string',
+    type: 'required|string',
+    color: 'required|string',
+    birthday: 'string',
+    license: 'boolean',
+    habitat: 'string',
+    cost: 'numeric',
+    trained: 'boolean'
+  };  
+
+  validator(req.body, validationRule, {}, (err, status) => {
+    if (!status) {
+      res.status(412).send({
+        success: false,
+        message: 'Contact Validation failed',
         data: err
       });
     } else {
@@ -26,5 +52,5 @@ const saveContact = (req, res, next) => {
 };
 
 module.exports = {
-  saveContact
+  createUpdateContact, createUpdatePet
 };

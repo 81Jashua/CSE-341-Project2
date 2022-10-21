@@ -11,7 +11,7 @@ POST http://localhost:8080/contacts/ HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"TestValidation", "lastName":"Snyder", "email":"madd@test.com", "birthday":"12/10/2010", "phone":"381-966-7951", "address":"3533 Fairway Cir", "city":"Spanish Fork", "state": "UT", "zip": 84660
+"firstName":"TestValidation2", "lastName":"Snyder", "email":"madd@test.com", "birthday":"12/10/2010", "phone":"381-966-7951", "address":"3533 Fairway Cir", "city":"Spanish Fork", "state": "UT", "zip": 84660
 }
 
 ### UPDATE CONTACT 
@@ -31,13 +31,13 @@ DELETE http://localhost:8080/contacts/633998317e01e692acc8db29 HTTP/1.1
 ### GET ALL PETS
 GET http://localhost:8080/pets
 ### GET PET BY ID
-GET http://localhost:8080/pets/634ad40bc6894380de46df8d
+GET http://localhost:8080/pets/6352ab32044f6a4739b57555
 ### CREATE PET 
 POST http://localhost:8080/pets/ HTTP/1.1 
 content-type: application/json
 
 {
-"ownerId":"Not implented Yet", "name":"TestDog", "type":"Cat", "sex":"female", "color":"Calico", "birthday":"12/10/2020", "license":"1", "habitat":"Inside", "cost":72.77, "trained": "0"
+"ownerId":"634ac607e48de5bc59de47b0", "name":"TestDog", "type":"Cat", "sex":"female", "color":"Calico", "birthday":"12/10/2020", "license":"abc", "habitat":"Inside", "cost":72.77, "trained": "0"
 }
 
 ### UPDATE PET 
