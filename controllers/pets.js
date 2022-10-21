@@ -3,8 +3,10 @@ const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
   // #swagger.description = 'Get all pets in Pets db'
-  const result = await mongodb.getDb().db('CSE341').collection('pet').find();
-  result.toArray().then((lists) => {
+  mongodb.getDb().db('CSE341').collection('pet').find().toArray((err, lists) => {
+    if (err) {
+      res.status(400).json({message: err});
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
@@ -12,9 +14,14 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   // #swagger.description = 'Get pet by pet id in Pets db'
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact id to find a contact.');
+  }
   const petId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db('CSE341').collection('pet').find({ _id: petId });
-  result.toArray().then((lists) => {
+  mongodb.getDb().db('CSE341').collection('pet').find({ _id: petId }).toArray((err, lists) => {
+    if (err) {
+      res.status(400).json({message: err});
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
