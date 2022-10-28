@@ -1,8 +1,8 @@
 const appConfig = require("../config/app");
 //const axios = require("axios");
 
-const dotenv = require('dotenv');
-dotenv.config();
+//const dotenv = require('dotenv');
+//dotenv.config();
 
 const AuthorizationController = {
   login: (req, res) => {
