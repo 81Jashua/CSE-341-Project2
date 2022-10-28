@@ -1,17 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const petsController = require('../controllers/pets');
-const validation = require('../middleware/validate');
+const AuthorizationController = require('../controllers/authorization');
 
-router.get('/login', petsController.getAll);
-
-router.get('/:id', petsController.getSingle);
-
-router.post('/', validation.createUpdatePet, petsController.createPet);
-
-router.put('/:id', validation.createUpdatePet, petsController.updatePet);
-
-router.delete('/:id', petsController.deletePet);
+router.get('/login', AuthorizationController.login);
 
 module.exports = router;
