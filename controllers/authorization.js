@@ -18,8 +18,7 @@ const AuthorizationController = {
   },
 
   callback: async (req, res) => {
-    const response = await fetch(
-      "https://cse-341-testing.us.auth0.com/oauth/token",
+    const response = await fetch(`${appConfig.authorizationHost}/oauth/token`,
       {
         method: "POST",
         headers: {
