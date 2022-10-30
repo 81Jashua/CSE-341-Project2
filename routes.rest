@@ -101,3 +101,8 @@ content-type: application/json
 
 ### DELETE PET
 DELETE https://project2-rq2e.onrender.com/pets/633876ffa52c4c6a870799e8 HTTP/1.1
+
+############################################ Login    ##############################################
+############################################          ############################################
+### Oath02 Login
+GET https://project2-rq2e.onrender.com/authorization/login
